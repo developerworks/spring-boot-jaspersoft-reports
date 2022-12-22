@@ -1,0 +1,61 @@
+/*products.css*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: darkslategray;
+}
+
+.container {
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.card {
+    width: 100%;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid lightslategray;
+    background-color: white;
+}
+
+.products-section .card {
+    background-color: black;
+    color: white;
+}
+
+.products-section .card:hover {
+    background-color: lightblue;
+    color: black;
+}
+
+.products-section .card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.btn-primary {
+    padding: 10px;
+    background-color: green;
+    color: white;
+
+}
+
+.btn-primary:hover {
+    cursor: pointer;
+}

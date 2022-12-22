@@ -1,0 +1,54 @@
+<!-- products.html -->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+    <link th:href="@{products.css}" rel="stylesheet">
+</head>
+<body>
+<section class="products-form-section">
+    <div class="container">
+        <div class="card">
+            <form th:action="@{/report}" method="post" class="form-control">
+                <div class="date-control">
+                    <input type="date" th:name="date">
+
+                </div>
+                <div class="file-type-control">
+                    <select th:name="fileFormat">
+                        <option th:value="pdf" th:text="PDF"></option>
+
+                    </select>
+
+                </div>
+                <div class="generate-btn">
+                    <input type="submit" class="btn-primary" value="generate report">
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="products-section">
+    <div class="container">
+        <div class="card" th:each="product : ${products}">
+            <p th:text="${product.id}"></p>
+            <p th:text="${product.name}"></p>
+            <p th:text="${product.description}"></p>
+            <p th:text="${product.productType}"></p>
+            <p th:text="${product.price}"></p>
+            <p th:text="${product.createdAt}"></p>
+
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>
